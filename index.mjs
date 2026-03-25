@@ -39,7 +39,7 @@ const stats = {
 // 插件初始化
 const plugin_init = async (ctx) => {
     logger = ctx.logger;
-    logger.info("禁言记录恢复插件 v1.0.0 已初始化");
+    logger.info("禁言记录恢复插件 v1.0.1 已初始化");
     logger.info("作者：星陨");
 
     // 构建配置界面
