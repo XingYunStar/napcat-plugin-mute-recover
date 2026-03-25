@@ -1,0 +1,25 @@
+{
+  "name": "napcat-plugin-mute-recover",
+  "plugin": "禁言恢复",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.mjs",
+  "description": "禁言恢复插件 - 禁言者被解禁时恢复禁言剩余时长",
+  "author": "星陨",
+  "license": "MIT",
+  "napcat": {
+    "tags": ["管理", "禁言", "自动化"],
+    "minVersion": "4.14.0",
+    "homepage": "https://github.com/XingYunStar/napcat-plugin-mute-recover"
+  },
+  "features": {
+    "recordBan": "记录每次禁言的详细信息（时间、时长、操作人）",
+    "autoUnban": "满足条件时自动恢复剩余禁言时长",
+    "conditions": [
+      "非首次禁言人提前解除禁言",
+      "被禁言者重新加入群聊",
+      "被禁言者发言"
+    ],
+    "dataPersistence": "禁言记录持久化存储"
+  }
+}
