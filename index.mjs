@@ -21,7 +21,7 @@ let currentConfig = {
     clearRecordOnFullUnban: true,    // 完整解除禁言后是否清除记录
     trackOnLeave: true,              // 退群时是否保留禁言记录
     trackOnMessage: true,            // 发言时是否检查并恢复禁言
-    allowOperatorUnban: false,       // 允许禁言操作者解除禁言（原操作者解除时不恢复）
+    allowOperatorUnban: true,       // 允许禁言操作者解除禁言（原操作者解除时不恢复）
     bannedUsers: {}                  // 存储禁言用户记录
 };
 
@@ -51,7 +51,7 @@ const plugin_init = async (ctx) => {
         ctx.NapCatConfig.boolean("clearRecordOnFullUnban", "完整解除后清除记录", true, "禁言时间完整结束后是否清除记录"),
         ctx.NapCatConfig.boolean("trackOnLeave", "退群时保留记录", true, "用户退群时是否保留禁言记录"),
         ctx.NapCatConfig.boolean("trackOnMessage", "发言时检查恢复", true, "用户发言时是否检查并恢复禁言"),
-        ctx.NapCatConfig.boolean("allowOperatorUnban", "允许禁言操作者解除禁言", false, "开启后，只有第一次禁言的操作者解除时才不恢复；关闭后，任何人解除都会立即恢复")
+        ctx.NapCatConfig.boolean("allowOperatorUnban", "允许禁言操作者解除禁言", true, "开启后，只有第一次禁言的操作者解除时才不恢复；关闭后，任何人解除都会立即恢复")
     );
 
     // 加载配置
